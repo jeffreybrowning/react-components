@@ -27,13 +27,12 @@ var styles = {
     textShadow: '1px 2px 2px rgba(100, 100, 100, 1)',
     color: tile.color
   },
-  middleContent: {
+  middleContainer: {
     paddingBottom: 100,
-    borderBottom: '2px solid #FFF5E3',
-    //borderRadius: 5
+    borderBottom: '2px solid #FFF5E3'
   },
   sharedWith: {
-    color: '#FFCF74',
+    color: '#FFCF74'
   },
   footer: {
     paddingTop: 5,
@@ -51,13 +50,13 @@ var listTile = React.createClass({
 
   render: function () {
     return (
-      <div style={styles.tileBorder}>
-        <div style={styles.centeredContainer}>
-          <div style={styles.middleContent}>
-            <div style={styles.header}>{this.state.header}</div>
-            <div style={styles.taskCount}>{this.state.taskCount} unread tasks</div>
+      <div style={styles.tileBorder} className="tile-border">
+        <div style={styles.centeredContainer} className="center-container">
+          <div style={styles.middleContainer} className="middle-container">
+            <div style={styles.header} className="header">{this.state.header}</div>
+            <div style={styles.taskCount} className="task-count">{this.state.taskCount} unread tasks</div>
           </div>
-          <div style={styles.footer}>
+          <div style={styles.footer} className="footer">
             <div class="footer-content">Shared with <span style={styles.sharedWith}>{this.state.sharedWith}</span> : Created on {this.state.createdDate}</div>
           </div>
         </div>
